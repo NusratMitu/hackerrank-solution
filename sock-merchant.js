@@ -11,18 +11,24 @@ const countPair = (a,n) => {
 // }
 
 // return sum;
-const count = new Map();
-let sum = 0;
+return  a.reduce((acc, c) => {
+  console.log(acc, c)
+  acc[c] = (acc[c] || 0) + 1;
+  return acc;
+}, {})  
 
-for (const num of a) {
-  count.set(num, (count.get(num) || 0) + 1);
-  console.log( count.set(num, (count.get(num))));
-  if (count.get(num) % 2 === 0) {
-    sum++;
-  }
-}
+// const count = new Map();
+// let sum = 0;
 
-return sum;
+// for (const num of a) {
+//   count.set(num, (count.get(num) || 0) + 1);
+//   console.log( count.set(num, (count.get(num))));
+//   if (count.get(num) % 2 === 0) {
+//     sum++;
+//   }
+// }
+
+// return sum;
 
 }
 
